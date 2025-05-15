@@ -40,6 +40,12 @@ The assignment is divided into three main parts:
 - Calculate match accuracy as a percentage
 - Allow authentication based on a threshold match percentage
 
+## Data
+- We have a number of text files under the `data` folder.
+- `Original.txt` will be the main fingerprint.
+- `User1.txt`, `User2.txt` and so on will be fingerprints of different users (other than oringinal).
+- `variation1.txt`, `variation2.txt` and so on are different variations of `Original.txt`, to be used for testing error threshold.
+ 
 ## Getting Started
 
 ### Required Files
@@ -131,7 +137,7 @@ To test your implementation:
 2. Push your code to the repository
 3. Submit the repository link on Canvas
 
-## Grading Rubric
+## Grading Rubric (Temporary)
 
 Your assignment will be graded based on:
 - Correct implementation of the `FingerPrint` class (30%)
