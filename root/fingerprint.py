@@ -26,11 +26,6 @@ class FingerPrint:
         # Direct constructor
         elif len(args) == 5:
             # TODO: Assign the parameters to the corresponding instance variables
-            # TODO: self.data = args[0]
-            # TODO: self.name = args[1]
-            # TODO: self.year = args[2]
-            # TODO: self.rows = args[3]
-            # TODO: self.cols = args[4]
             pass
         
         else:
@@ -62,10 +57,10 @@ class FingerPrint:
         pass
 
     def match(self, other):
-        """Return fraction of pixels matching (0.0 - 1.0)."""
+        """Return fraction of pixels matching (0.00 - 1.00)."""
         # TODO: Count how many pixels match between self and other
         # TODO: Divide by total number of pixels to get match percentage
-        # TODO: Return the result as a float between 0.0 and 1.0
+        # TODO: Return the result as a float between 0.00 and 1.00
         pass
     
     # Getters and setters (optional but could be useful)
