@@ -27,8 +27,8 @@ class TestFileProcessor(unittest.TestCase):
         """
         for path in self.sample_files:
             with self.subTest(file=path):
-                # TODO: Read the first four lines of 'path' manually
-                # TODO: Call fileprocessor.load_fingerprint(path)
+                # TODO: Read the first four lines of 'sample file (path)' manually
+                # TODO: Load the fingerprint
                 # TODO: Assert get_name(), get_year(), get_rows(), get_cols()
                 pass
 
@@ -36,25 +36,40 @@ class TestFileProcessor(unittest.TestCase):
         """
         Simulate entering the original file path and expect access granted.
         """
-        # TODO: Set fileprocessor.original to one of the sample FingerPrint text files.
+        # TODO: Set fileprocessor.original to the original.txt file.
         # Pass that as input into the method which compares two fingerprints,
         # the second fingerprint being the same one as the original.
         # Use assertions to verify that the access is granted successfully when fingerprints match.
         
-        # TODO: (OPTIONAL) Duplicate one of the fingerprint text files and change just a few characters
-        # in the actual fingerprint. Now test that the access is granted successfully, given that
-        # the error threshold is met.
+        # TODO: Use one of the variation.txt files, these are the original finagerprint with a few characters changed.
+        # Now test that the access is granted successfully, given that
+        # the error threshold is met. (Print the error threshold alongside the match % for easier readability)
         pass
 
-    def test_main_lockout(self):
+    def test_main_delegates_authentication(self):
         """
-        Simulate entering wrong files and expect lockout message after max_tries.
+        Simulate main() calling IncidentResponse.authenticate.
         """
-        # TODO: Set fileprocessor.original appropriately.
-        # Override input() to return wrong fingerprint repeatedly.
-        # Set max_tries to small number.
-        # Use assertions to ensure that the lockout message is displayed correctly. 
+        # 1. Use unittest.mock.patch to replace IncidentResponse.authenticate
+        #    so it records how it was called, e.g.:
+        #       with patch('IncidentResponse.authenticate') as mock_auth:
+        #
+        # 2. Provide a fake sequence of user inputs for file names:
+        #    - First input: the path to a valid fingerprint file (e.g. 'data/User1.txt')
+        #    - Second input: something to make the loop exit after authenticate returns True
+        #    You can patch builtins.input() to return these values in order.
+        #
+        # 3. Also patch load_fingerprint so it returns a FingerPrint object
+        #    without reading disk, if you like:
+        #       with patch('fileprocessor.load_fingerprint') as mock_loader:
+        #           mock_loader.return_value = FingerPrint('data/User1.txt')
+        #
+        # 4. Call fileprocessor.main().
+        #
+        # 5. After main() finishes, assert that:
+        #       mock_auth.assert_called_once_with(mock_loader.return_value)
         pass
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
