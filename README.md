@@ -51,7 +51,8 @@ The assignment is divided into three main parts:
 ### Required Files
 1. `fingerprint.py` - Contains the `FingerPrint` class
 2. `fileprocessor.py` - Contains the main application logic
-3. Sample fingerprint text files (included in the repository)
+3. `incidentresponse.py` - Contains the logic for the lockout handling
+4. Sample fingerprint text files (included in the repository)
 
 ### FingerPrint Class Requirements
 
@@ -74,6 +75,19 @@ Your `FingerPrint` class should include:
 - `display_image()`: Prints the fingerprint image in text form
 - `__eq__(other)`: Checks if two fingerprints are identical
 - `match(other)`: Returns the accuracy percentage between two fingerprints
+
+### Incident Response Requirements
+
+Your `incidentresponse.py` file should include:
+
+- An `authenticate` function that:
+  - Accepts the original fingerprint, max allowed attempts, and error threshold
+  - Loops to prompt for user fingerprint file names
+  - Loads fingerprints using the `FingerPrint` class
+  - Calculates match percentage
+  - Grants access if match ≥ threshold
+  - Increments attempt counter on failure
+  - Locks system and exits after max failures
 
 ### File Processor Requirements
 
