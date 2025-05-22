@@ -145,6 +145,20 @@ To test your implementation:
 4. Observe how the system handles matches, near-matches, and non-matches
 5. Test the incident response system by deliberately failing authentication multiple times
 
+## Test Files
+
+- `test_fileprocessor.py` should:
+  - Patch `input()` to simulate user entries
+  - Patch `authenticate()` to check if delegation is working
+  - Include TODO comments for where to mock and assert
+
+- `test_incidentresponse.py` should:
+  - Patch `input()` and simulate various attempts
+  - Test access granted when accuracy ≥ threshold
+  - Test lockout when max attempts are exceeded
+  - Include TODO comments for asserting access results
+
+
 ## Submission Instructions
 
 1. Complete all parts of the assignment
