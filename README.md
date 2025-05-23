@@ -1,5 +1,3 @@
-# fa25-hw5-biometrics-handout
-
 # HW5: Biometric Fingerprint Processing
 
 ## Overview
