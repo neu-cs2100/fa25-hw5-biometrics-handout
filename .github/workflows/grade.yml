@@ -25,20 +25,20 @@ on:
   # To change the behavior of submitting on every push (vs just when commit has message
   # submit or when the submission is manually requested)
   push:
-    branches:
-      - main
+   branches:
+     - main
 
 jobs:
   grade:
     name: Submit and Grade Assignment
-    runs-on: self-hosted
+    runs-on: khoury-course-runners #Prod
     steps:
       - name: Checkout
         id: checkout
         uses: actions/checkout@v4
         with:
           path: submission
-
+      
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -49,15 +49,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
 
-      - name: Run Unit Tests
-        working-directory: submission
-        run: |
-          python -m unittest discover -v
-
       - name: Collect Submission and Run Grader
-        uses: pawtograder/assignment-action@v1
+        uses: Smaran-Teja/assignment-action@main
         with:
           grading_server: 'https://api.pawtograder.com'
-          handout_repo: 'neu-cs2100/fa25-hw5-biometrics-handout'
+          handout_repo: 'neu-cs2100/fa25-hw1-algodecisionmakers-handout'
           action_ref: '${{ github.action_ref }}'
           action_repository: '${{ github.action_repository }}'
