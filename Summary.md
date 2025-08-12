@@ -4,7 +4,12 @@ Answer all the questions. Please put your answers _after_ the italicized instruc
 
 ## Parameter Selection Rationale  
 _Explain how you decided on your values for `max_tries` and `err_thresh`. Why did you choose these particular thresholds? How do they balance security, usability, and fairness?_  
-[10 points]  
+[2 points]  
+_Answer:_
+
+## Stakeholder-value Matrix
+_Please put a stakeholder-value matrix for fingerprint-based login systems. Include at least five stakeholders and at least three values, one of which should be Privacy._
+[8 points]
 _Answer:_
 
 ---
