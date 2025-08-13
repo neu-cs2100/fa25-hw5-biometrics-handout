@@ -157,12 +157,6 @@ To test your implementation:
   - Include TODO comments for asserting access results
 
 
-## Submission Instructions
-
-1. Complete all parts of the assignment
-2. Push your code to the repository
-3. Submit the repository link on Canvas
-
 ## Grading Rubric (Temporary)
 
 Your assignment will be graded based on:
