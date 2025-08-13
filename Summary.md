@@ -28,15 +28,6 @@ _For each source, make sure to include how they helped you (or how you helped th
 
 ---
 
-### What was your AI usage?  
-_State explicitly (yes or no) whether you used AI. If so, say which tools you used and what your prompts were. Your assignment will not be graded if you do not answer this question._  
-[1 point]
-
-* _“I used ChatGPT to generate the initial TODO skeleton for IncidentResponse.py; prompt: ‘Refactor authentication logic into a separate module with TODOs.’”_  
-* _If you did not use AI, please state that._
-
----
-
 ### What resources did you use?  
 _Please give specific URLs (not “Stack Overflow” or “Google”) and state which ones were particularly helpful._  
 [1 point]
