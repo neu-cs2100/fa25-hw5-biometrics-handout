@@ -1,5 +1,7 @@
 # HW5: Biometric Fingerprint Processing
 
+**Note: This repository is for viewing only. Do not work on the assignment using this repository -- the actual course assignments will be provided to you via Pawtograder.**
+
 ## Overview
 
 Welcome to the Biometric Fingerprint Processing assignment! In this project, you will learn how biometric fingerprint information is stored and used for authentication. You'll implement a fingerprint processing system that can read, store, display, and compare fingerprint data.
