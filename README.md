@@ -5,6 +5,8 @@
 
 ## Overview
 
+This assignment is based on [this Nifty Assignment](http://nifty.stanford.edu/2024/servin-alonso-garcia-fingerprint/).
+
 Welcome to the Biometric Fingerprint Processing assignment! In this project, you will learn how biometric fingerprint information is stored and used for authentication. You'll implement a fingerprint processing system that can read, store, display, and compare fingerprint data.
 
 This assignment will help you gain hands-on experience with:
